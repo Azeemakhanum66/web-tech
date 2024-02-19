@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Events </title>
+</head>
+<script type="text/javascript" >
+function msg()
+{ var name= document.person.n1;
+var usn= document.person.n2;
+alert ("Hello" + name.value + "USN" + usn.value);
+}
+</script>
+<body>
+</br></br>
+<form name="person" >
+Enter The name </br>
+<input type="text" name="n1"></br></br>
+Enter The USN </br>
+<input type="text" name="n2">
+<input type="submit" onClick="msg();">
+</form>
+</body>
+</html>
