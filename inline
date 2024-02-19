@@ -1,0 +1,9 @@
+<html>
+    <head>
+        <title>Inline style</title>
+    </head>
+    <body>
+        <p style="text-align: center; color: purple; margin-left: 60px; margin-top:60px ;font-size: 100pt;">Welcome to Web tech exam</p>
+
+    </body>
+</html>
