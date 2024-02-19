@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <style>
+            h1{font-family: serif; text-align: center; color: blue;}
+            p{text-align: center; color:brown ;
+            margin-left: 40px;
+            margin-top: 40px;
+            font-size: large;}
+        </style>
+    </head>
+    <body>
+        <h1 class="blue">Everybody Welcome</h1>
+        <p>Web Technology lab</p>
+    </body>
+</html>
