@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="2a.css">
+    </head>
+    <body>
+        <h1 clas="blue">Welcome Welcome annyong</h1>
+        <p>this is web tech</p>
+    </body>
+</html>
+h1{font-family: serif; text-align: center; color: blue;}
+            p{text-align: center; color:brown ;
+            margin-left: 40px;
+            margin-top: 40px;
+            font-size: large;}
+            .blue{color: blue; text-align: center;}
