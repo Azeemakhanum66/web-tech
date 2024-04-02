@@ -1,40 +1,44 @@
-if(ServiceWorker in navigator){
+// Register Service Worker
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker
     .register('service-worker.js')
-    .then(function(){
-        console.log("service worker registered")
+    .then(function() {
+    console.log('Service Worker Registered');
     });
-}
-const todoform=document.getElementById('todo-form');
-const todoInput=document.getElementById('todo-Input');
-const todoList=document.getElementById('todo-List');
-let tasks=[];
-function renderTasks(){
-    todoList.innerHTML="";
-    tasks.forEach(function(tasks){
-        const li= document.createElement('li');
-        li.textContent=tasks.title;
-        
-        if(tasks.completed){
-            li.classList.add('completed');
-        }
-        li.addEventListener('click',function(){
-            tasks.completed=!tasks.completed;
-            renderTasks()
-        });
-        todoList.appendChild(li);
-    });
-}
-todoform.addEventListener('submit',function(event){
-    event.preventDefault();
-    const taskTitle=todoInput.ariaValueMax.trim();
-    if(taskTitle!==""){
-        const task={
-            title:taskTitle,
-            completed:false
-        };
-        tasks.push(tasks);
-        renderTasks();
-        todoInput.value="";
     }
-});
+    // DOM elements
+    const todoForm = document.getElementById('todo-form');
+    const todoInput = document.getElementById('todo-input');
+    const todoList = document.getElementById('todo-list');
+    // Store tasks in an array
+    let tasks = [];
+    // Render tasks in the list
+    function renderTasks() {
+    todoList.innerHTML = '';
+    tasks.forEach(function(task) {
+    const li = document.createElement('li');
+    li.textContent = task.title;
+    if (task.completed) {
+    li.classList.add('completed');
+    }
+    li.addEventListener('click', function() {
+    task.completed = !task.completed;
+    renderTasks();
+    });
+    todoList.appendChild(li);
+    });
+    }
+    // Handle form submission
+    todoForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const taskTitle = todoInput.value.trim();
+    if (taskTitle !== '') {
+    const task = {
+    title: taskTitle,
+    completed: false
+    };
+    tasks.push(task);
+    renderTasks();
+    todoInput.value = '';
+    }
+    });
